@@ -14,6 +14,10 @@ export class MainColorDirective {
   }
 
   private setColor(color: string) {
-    this.renderer.setStyle(this.el.nativeElement, 'color', color);
+    this.renderer.setAttribute(
+      this.el.nativeElement,
+      'style',
+      `color: ${color} !important`
+    );
   }
 }

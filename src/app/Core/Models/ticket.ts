@@ -10,5 +10,9 @@ export interface Ticket {
   location: string;
   numberOfPersons: number;
   payCount: number;
-  ticketFile: string;
+  ticketFile:{
+    fileName:string;
+    fileType:string;
+    fileSize:number;
+  };
 }

@@ -1,0 +1,22 @@
+::ng-deep .p-element.p-inputwrapper {
+  margin-left: auto;
+}
+::ng-deep .p-dropdown-items {
+  padding: 0;
+}
+::ng-deep .p-highlight {
+  background-color: #8a74f9;
+  color: white;
+}
+::ng-deep .p-ripple.p-paginator-page {
+  max-width: 27px;
+
+  height: 27px;
+  border-radius: 4.5px;
+}
+
+::ng-deep .p-tooltip {
+padding: 3px;
+margin: 1px;
+opacity: 50%;
+}
