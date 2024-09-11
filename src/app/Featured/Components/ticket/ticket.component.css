@@ -1,0 +1,33 @@
+.qr-code {
+  border-top: #ffffff66 dashed 2px;
+
+}
+.overlay{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/ticket_overlay.png');
+
+}
+.qr-code::after {
+  content: "";
+  position: absolute;
+  left: -44px;
+  top: -17px;
+  background-color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+.qr-code::before {
+  content: "";
+  position: absolute;
+  right: -59px;
+  top: -17px;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
