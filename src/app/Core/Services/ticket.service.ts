@@ -28,7 +28,7 @@ const TICKET_DATA: Ticket[] = [
       phone: '01129542518',
     },
     ticketCode: 'C-101',
-    price: 30,
+    price: 10,
     location: 'Cinema Misr, Mall of Arabia, Al-Otnan Tower, Saraya El-Qubba',
     numberOfPersons: 1,
     payCount: 2,
