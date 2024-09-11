@@ -1,4 +1,4 @@
-
+<app-table-search></app-table-search>
 
 <p-table
   [value]="tickets"
@@ -14,11 +14,13 @@
       <th class="text-black-50 fw-medium">#</th>
       <th class="text-black-50 fw-medium">User</th>
       <th class="text-black-50 fw-medium"># Ticket</th>
-      <th class="text-black-50 fw-medium">Price</th>
+      <th class="text-black-50 fw-medium" pSortableColumn="price">
+        <p-sortIcon field="price" /> Price
+      </th>
       <th class="text-black-50 fw-medium">Location</th>
       <th class="text-black-50 fw-medium"># Person</th>
-      <th class="text-black-50 fw-medium"># Pay</th>
-      <th class="text-black-50 fw-medium">Ticket File</th>
+      <th class="text-black-50 fw-medium"># Purchases</th>
+      <th class="text-black-50 fw-medium">Ticket</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-ticket>
@@ -45,11 +47,16 @@
       </td>
       <td>{{ ticket.ticketCode }}</td>
       <td>{{ ticket.price | currency }}</td>
-      <td pTooltip="{{ticket.location}}" tooltipPosition="top" class="text-truncate" style="max-width: 150px;">
+      <td
+        pTooltip="{{ ticket.location }}"
+        tooltipPosition="top"
+        class="text-truncate"
+        style="max-width: 150px"
+      >
         {{ ticket.location }}
       </td>
       <td>{{ ticket.numberOfPersons }}</td>
-      <td>{{ ticket.payCount ==1?'Only Once' :ticket.payCount }}</td>
+      <td>{{ ticket.payCount == 1 ? "Only One" : ticket.payCount }}</td>
       <td>
         <div class="d-flex align-items-center gap-2">
           <div style="background-color: #8a74f91a" class="rounded-1 px-1">
@@ -66,9 +73,11 @@
           </div>
           <button
             class="btn btn-sm px-1 py-0"
-
+            fileSaver
+            fileName="Ticket"
+            [url]="'assets/FD_Assignment_SEP (1).pdf'"
           >
-            <img src="assets/download_btn.png" alt="">
+            <img src="assets/download_btn.png" alt="" />
           </button>
         </div>
       </td>

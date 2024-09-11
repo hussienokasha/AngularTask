@@ -4,7 +4,7 @@
 ::ng-deep .p-dropdown-items {
   padding: 0;
 }
-::ng-deep .p-highlight {
+::ng-deep .p-ripple.p-highlight {
   background-color: #8a74f9;
   color: white;
 }
@@ -13,10 +13,4 @@
 
   height: 27px;
   border-radius: 4.5px;
-}
-
-::ng-deep .p-tooltip {
-padding: 3px;
-margin: 1px;
-opacity: 50%;
 }
