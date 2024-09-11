@@ -1,0 +1,49 @@
+<p-table [value]="tickets" [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>#</th>
+      <th>User</th>
+      <th># Ticket</th>
+      <th>Price</th>
+      <th>Location</th>
+      <th># Person</th>
+      <th># Pay</th>
+      <th>Ticket File</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-ticket>
+    <tr>
+      <td>{{ ticket.id }}</td>
+      <td>
+        <div class="d-flex gap-2">
+          <img
+            [src]="ticket.user.img"
+            class="rounded-circle object-fit-cover"
+            width="45px"
+            height="45px"
+            alt=""
+          />
+          <div>
+            <p class="m-0 fw-semibold" style="font-size: 14px">
+              {{ ticket.user.userName }}
+            </p>
+            <p class="m-0 text-opacity-25" style="font-size: 12px">
+              {{ ticket.user.phone }}
+            </p>
+          </div>
+        </div>
+      </td>
+      <td>{{ ticket.ticketCode }}</td>
+      <td>{{ ticket.price | currency }}</td>
+      <td>{{ ticket.location }}</td>
+      <td>{{ ticket.numberOfPersons }}</td>
+      <td>{{ ticket.payCount }}</td>
+      <td><div class="d-flex">
+        <i class="pi pi-ticket"></i>
+        <div>
+          
+        </div>
+      </div></td>
+    </tr>
+  </ng-template>
+</p-table>
