@@ -48,8 +48,7 @@ export class ChartComponent {
         },
       },
       title: {
-        text: "إحصائيات استخدام القسيمة",
-        subtext:"صالح حتى 15 يوليو 2023",
+
         right: '2%',
         top: '5%',
         textStyle: {
@@ -62,19 +61,19 @@ export class ChartComponent {
         type: 'category',
         boundaryGap: false,
         data: [
-          'Jan',
-          'Feb',
-          'Mar',
-          'Apr',
-          'May',
-          'Jun',
-          'Jul',
-          'Aug',
-          'Sep',
-          'Oct',
-          'Nov',
-          'Dec',
-        ],
+          "يناير",
+          "فبراير",
+          "مارس",
+          "أبريل",
+          "مايو",
+          "يونيو",
+          "يوليو",
+          "أغسطس",
+          "سبتمبر",
+          "أكتوبر",
+          "نوفمبر",
+          "ديسمبر"
+        ].reverse(),
       },
       yAxis: {
         type: 'value',
