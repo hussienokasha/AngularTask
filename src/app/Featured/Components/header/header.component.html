@@ -1,8 +1,18 @@
 <div class="d-flex justify-content-between align-items-center py-3">
-  <button class="btn btn-sm border fw-bold fs-6">Edit <i MainColor class="pi pi-pen-to-square"></i></button>
   <div class="d-flex align-items-center gap-2">
-    <p class="fw-bold m-0">Ticket Number  #1234</p>
-    <button class="btn btn-sm bg-dark-subtle"><i class="pi pi-arrow-right"></i></button>
+    <button class="btn btn-sm bg-dark-subtle">
+      <i class="pi pi-arrow-right"></i>
+    </button>
+    <p class="fw-bold m-0">{{ "header.tNumber" | translate }} #1234</p>
+  </div>
+  <div class="d-flex align-items-center gap-2">
+    <button class="btn btn-sm border fw-bold fs-6">
+      {{ "header.edit" | translate }}
+      <i MainColor class="pi pi-pen-to-square"></i>
+    </button>
+    <button class="btn btn-sm btn-outline-secondary" (click)="switchLang()">
+      {{ currentLang == "en" ? "عربي" : "EN" }}
+    </button>
   </div>
 
 </div>

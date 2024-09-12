@@ -1,18 +1,26 @@
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-2 ">
-  <div class="d-flex align-items-center gap-3">
-    <button class="btn text-white text-nowrap" style="background-color: #8a74f9">
-      Book a Ticket
-    </button>
-    <p class="m-0">{{switch?'Enabled':'Disabled'}}</p>
-    <p-inputSwitch styleClass="mt-1" [(ngModel)]="switch"/>
-  </div>
+<div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
   <div class="d-flex align-items-center gap-2 flex-wrap">
-    <button class="btn border"><i class="pi pi-sort-alt"></i></button>
-    <button class="btn border"><i class="pi pi-sliders-h"></i></button>
-    <p-iconField iconPosition="right">
+    <p class="m-0 fs-4">{{ "search.sales" | translate }}</p>
+    <p-iconField iconPosition="left">
       <p-inputIcon styleClass="pi pi-search" />
-      <input type="text" pInputText placeholder="Search" />
+      <input
+        type="text"
+        pInputText
+        class="ps-5"
+        [placeholder]="'search.search' | translate"
+      />
     </p-iconField>
-    <p class="m-0 fs-4">Ticket Sales</p>
+    <button class="btn border"><i class="pi pi-sliders-h"></i></button>
+    <button class="btn border"><i class="pi pi-sort-alt"></i></button>
+  </div>
+  <div class="d-flex align-items-center gap-3">
+    <p class="m-0">{{ getTranslation() }}</p>
+    <p-inputSwitch styleClass="mt-1" [(ngModel)]="switch" />
+    <button
+      class="btn text-white text-nowrap"
+      style="background-color: #8a74f9"
+    >
+      {{ "search.book" | translate }}
+    </button>
   </div>
 </div>

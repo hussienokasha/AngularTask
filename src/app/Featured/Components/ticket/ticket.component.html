@@ -5,7 +5,7 @@
       <button class="btn" pTooltip="Delete" tooltipPosition="bottom">
         <i class="pi pi-trash text-white fs-5"></i>
       </button>
-      <p class="m-0 text-white text-start">Show Movie Ticket</p>
+      <p class="m-0 text-white text-start">{{"ticket.title" | translate}}</p>
       <p></p>
     </div>
     <div
@@ -14,12 +14,22 @@
       <button class="btn" (click)="copyLink()">
         <i class="pi pi-copy fs-5" MainColor></i>
       </button>
-      <p class="m-0 fs-6 text-truncate" style="max-width: 182px">
+      <p class="m-0 fs-6 text-truncate" style="max-width: 182px;user-select: none;">
         {{ ticketLink }}
       </p>
     </div>
-    <p class="text-center mt-2 text-white">Valid until July 15, 2023</p>
+    <p class="text-center mt-2 text-white">{{"ticket.date" | translate}}</p>
     <div class="qr-code d-flex py-3 justify-content-between position-relative gap-2">
+
+      <div class="d-flex align-items-end gap-2">
+        <button class="btn btn-sm border text-white">
+         {{ "ticket.share" | translate}} <i class="pi pi-share-alt"></i>
+        </button>
+        <p class="m-0 text-white">
+         {{"ticket.discount" | translate}} <br />
+          <span class="fs-5">25%</span>
+        </p>
+      </div>
       <qrcode
         [qrdata]="ticketLink"
         [ariaLabel]="'QR Code image with the following content...'"
@@ -31,15 +41,6 @@
         [scale]="1"
         [width]="100"
       ></qrcode>
-      <div class="d-flex align-items-end gap-2">
-        <button class="btn btn-sm border text-white">
-          Share <i class="pi pi-share-alt"></i>
-        </button>
-        <p class="m-0 text-white">
-          Discount <br />
-          <span class="fs-5">25%</span>
-        </p>
-      </div>
     </div>
   </div>
 </div>

@@ -8,19 +8,28 @@
   [rowsPerPageOptions]="[4, 7]"
   showFirstLastIcon="false"
   [rows]="4"
+  paginatorStyleClass="justify-content-between"
 >
   <ng-template pTemplate="header">
     <tr class="text-center border-bottom">
       <th class="text-black-50 fw-medium">#</th>
-      <th class="text-black-50 fw-medium">User</th>
-      <th class="text-black-50 fw-medium"># Ticket</th>
-      <th class="text-black-50 fw-medium" pSortableColumn="price">
-        <p-sortIcon field="price" /> Price
+      <th class="text-black-50 fw-medium">{{ "table.user" | translate }}</th>
+      <th class="text-black-50 fw-medium">
+        {{ "table.ticketNo" | translate }}
       </th>
-      <th class="text-black-50 fw-medium">Location</th>
-      <th class="text-black-50 fw-medium"># Person</th>
-      <th class="text-black-50 fw-medium"># Purchases</th>
-      <th class="text-black-50 fw-medium">Ticket</th>
+      <th class="text-black-50 fw-medium" pSortableColumn="price">
+        <p-sortIcon field="price" /> {{ "table.price" | translate }}
+      </th>
+      <th class="text-black-50 fw-medium">
+        {{ "table.location" | translate }}
+      </th>
+      <th class="text-black-50 fw-medium">
+        {{ "table.personNo" | translate }}
+      </th>
+      <th class="text-black-50 fw-medium">
+        {{ "table.purshase" | translate }}
+      </th>
+      <th class="text-black-50 fw-medium">{{ "table.ticket" | translate }}</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-ticket>
@@ -39,7 +48,7 @@
             <p class="m-0 fw-semibold text-nowrap" style="font-size: 14px">
               {{ ticket.user.userName }}
             </p>
-            <p class="m-0 text-opacity-25" style="font-size: 12px">
+            <p class="m-0 text-black-50" style="font-size: 12px">
               {{ ticket.user.phone }}
             </p>
           </div>

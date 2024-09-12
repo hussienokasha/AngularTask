@@ -1,11 +1,11 @@
-<div class="container my-5 h-100">
-  <app-header></app-header>
-  <div class="row my-2 g-2 align-content-lg-stretch">
-    <div class="col-12 col-md-6 col-lg-4">
-      <app-ticket></app-ticket>
-    </div>
+<div class="container-lg my-5 h-100">
+  <app-header (languageChange)="onLangChange($event)"></app-header>
+  <div class="row my-3 g-2 align-content-lg-stretch">
     <div class="col-12 col-md-6 col-lg-8">
       <app-chart></app-chart>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <app-ticket></app-ticket>
     </div>
   </div>
   <app-table></app-table>

@@ -1,6 +1,10 @@
-::ng-deep .p-element.p-inputwrapper {
+::ng-deep .p-paginator-next:dir(ltr){
+  margin-right: auto;
+}
+::ng-deep .p-paginator-next:dir(rtl){
   margin-left: auto;
 }
+
 ::ng-deep .p-dropdown-items {
   padding: 0;
 }

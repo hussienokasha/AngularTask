@@ -1,0 +1,48 @@
+{
+  "header": {
+    "tNumber": "Ticket Number",
+    "edit": "edit"
+  },
+  "ticket": {
+    "title": "Show Movie Ticket",
+    "date": "Valid until July 15, 2023",
+    "share": "Share",
+    "discount": "Discount"
+  },
+  "chart": {
+    "title": "Coupon usage statistics",
+    "date": "Valid until July 15, 2023",
+    "months": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "duration": ["Yearly", "Monthly"],
+    "placeholder":"Duration"
+  },
+  "search": {
+    "book": "Book a New Ticket",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "sales":"Ticket Sales",
+    "search":"Search"
+  },
+  "table": {
+    "user": "User",
+    "ticketNo": "Ticket Number",
+    "price": "Price",
+    "location": "Cinemas",
+    "personNo": "Number of Persons",
+    "purshase": "No of purshases",
+    "ticket": "Ticket"
+  }
+}

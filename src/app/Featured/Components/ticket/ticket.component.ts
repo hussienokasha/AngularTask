@@ -5,6 +5,7 @@ import { MainColorDirective } from '../../../Core/Directives/main-color.directiv
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { QRCodeModule } from 'angularx-qrcode';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-ticket',
@@ -14,14 +15,18 @@ import { QRCodeModule } from 'angularx-qrcode';
     TooltipModule,
     MainColorDirective,
     ToastModule,
-    QRCodeModule
+    QRCodeModule,
+    TranslateModule
   ],
   templateUrl: './ticket.component.html',
   providers: [MessageService],
   styleUrl: './ticket.component.css',
 })
 export class TicketComponent {
-  constructor(private messageService: MessageService) {}
+  constructor(
+    private messageService: MessageService,
+
+  ) {}
   ticketLink: string = 'www.tazkty.com/473847';
   copyLink() {
     navigator.clipboard.writeText(this.ticketLink).then(() => {
